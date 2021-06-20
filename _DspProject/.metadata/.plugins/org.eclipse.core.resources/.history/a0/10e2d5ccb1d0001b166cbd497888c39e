@@ -1,0 +1,32 @@
+/*
+ * sci_get_function.c
+ *
+ *  Created on: 2021. 6. 19.
+ *      Author: sniper79
+ */
+
+#include "driverlib.h"
+#include "device.h"
+#include "stdint.h"
+
+// sicaFlush - This routine flushes SCIA
+void sciaFlush(void)
+{
+    // wait while TX is busy.
+    while (SCI_isTransmitterBusy(SCIA_BASE))
+    {
+
+    }
+}
+
+// sciGetFunction
+//
+// This function first initializes SCIA and performs an autobaud lock.
+// It contains a while loop waiting on commands from the host.
+// It processes each command and sends a response except for Run and Reset commands.
+// On Run kernel exits and branches to the Entry Point.
+// On Reset, the kernel exits the while loop and does a WatchDog Time-Out.
+uint32_t sciGetFunction(uint32_t BootMode)
+{
+
+}

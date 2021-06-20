@@ -1,0 +1,29 @@
+/*
+ * bootrom.h
+ *
+ *  Created on: 2021. 6. 19.
+ *      Author: sniper79
+ */
+
+#ifndef BOOTROM_H_
+#define BOOTROM_H_
+
+#include <stdint.h>
+#include "inc/hw_types.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_sysctl.h"
+#include "inc/hw_sci.h"
+#include "inc/hw_i2c.h"
+#include "sysctl.h"
+#include "cpu.h"
+#include "interrupt.h"
+#include "flash.h"
+#include "dcsm.h"
+#include "pin_map.h"
+#include "gpio.h"
+#include "sci.h"
+#include "spi.h"
+#include "i2c.h"
+#include "can.h"
+
+#endif /* BOOTROM_H_ */

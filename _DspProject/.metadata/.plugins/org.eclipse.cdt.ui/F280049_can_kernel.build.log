@@ -1,0 +1,53 @@
+
+**** Build of configuration CPU1_RAM for project F280049_can_kernel ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 6 all -O 
+ 
+Building file: "../codestartbranch.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="codestartbranch.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../codestartbranch.asm"
+Finished building: "../codestartbranch.asm"
+ 
+Building file: "../erase.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="erase.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../erase.c"
+Finished building: "../erase.c"
+ 
+Building file: "../can_boot.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="can_boot.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../can_boot.c"
+Finished building: "../can_boot.c"
+ 
+Building file: "../boot.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="boot.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../boot.c"
+Finished building: "../boot.c"
+ 
+Building file: "../can_get_function.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="can_get_function.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../can_get_function.c"
+Finished building: "../can_get_function.c"
+ 
+Building file: "../verify.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="verify.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../verify.c"
+Finished building: "../verify.c"
+ 
+Building file: "../dfu_kernel.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="dfu_kernel.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg"  "../dfu_kernel.c"
+Finished building: "../dfu_kernel.c"
+ 
+Building file: "../device/device.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/F280049_can_kernel" --include_path="D:/DSP/_DspProject/F280049_can_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="device/device.d_raw" --include_path="D:/DSP/_DspProject/F280049_can_kernel/CPU1_RAM/syscfg" --obj_directory="device"  "../device/device.c"
+Finished building: "../device/device.c"
+ 
+Building target: "F280049_can_kernel.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"F280049_can_kernel.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="F280049_can_kernel_linkInfo.xml" --entry_point=code_start --rom_model -o "F280049_can_kernel.out" "./boot.obj" "./can_boot.obj" "./can_get_function.obj" "./codestartbranch.obj" "./dfu_kernel.obj" "./erase.obj" "./verify.obj" "./device/device.obj" "../28004x_generic_ram_lnk.cmd" "../F021_API_F28004x_FPU32.lib" "C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/ccs/Debug/driverlib.lib"  -llibc.a 
+<Linking>
+Finished building target: "F280049_can_kernel.out"
+ 
+
+**** Build Finished ****

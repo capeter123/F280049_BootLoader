@@ -1,0 +1,17 @@
+/*
+ * sci_get_function.c
+ *
+ *  Created on: 2021. 6. 19.
+ *      Author: sniper79
+ */
+
+
+// sicaFlush - This routine flushes SCIA
+void sciaFlush(void)
+{
+    // wait while TX is busy.
+    while (SCI_isTransmitterBusy(SCIA_BASE))
+    {
+
+    }
+}

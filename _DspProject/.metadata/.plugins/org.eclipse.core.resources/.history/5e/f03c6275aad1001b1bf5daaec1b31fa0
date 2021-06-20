@@ -1,0 +1,42 @@
+/*
+ * can_boot.c
+ *
+ *  Created on: 2021. 6. 19.
+ *      Author: sniper79
+ */
+
+#include "bootrom.h"
+#include "commands.h"
+#include "driverlib.h"
+#include "Types.h"
+
+//
+// Globals
+//
+typedef struct
+{
+   uint16_t status;
+   uint32_t address;
+}  StatusCode;
+extern StatusCode statusCode;
+
+//
+// getWordData is a pointer to the function that interfaces to the peripheral.
+// Each loader assigns this pointer to it's particular getWordData function.
+//
+extern uint16fptr getWordData;
+
+//
+// Function Prototypes
+//
+extern uint16_t canGetWordData(void);
+extern void copyData(void);
+uint32_t getLongData(void);
+extern void readReservedFn(void);
+extern void Error(Fapi_StatusType status);
+uint32_t canBoot(uint32_t BootMode);
+
+uint32_t canBoot(uint32_t BootMode)
+{
+
+}

@@ -1,0 +1,183 @@
+
+**** Build of configuration Debug for project OBC_LLC_J7E_210511 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../C2000Ware/device_support/f28004x/f28004x_codestartbranch.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="C2000Ware/device_support/f28004x/f28004x_codestartbranch.d_raw" --obj_directory="C2000Ware/device_support/f28004x"  "../C2000Ware/device_support/f28004x/f28004x_codestartbranch.asm"
+Finished building: "../C2000Ware/device_support/f28004x/f28004x_codestartbranch.asm"
+ 
+Building file: "../Source/Can_CarCtl.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Can_CarCtl.d_raw" --obj_directory="Source"  "../Source/Can_CarCtl.c"
+"../Source/Can_CarCtl.c", line 129: warning #179-D: variable "puSavedMsg" was declared but never referenced
+"../Source/Can_CarCtl.c", line 137: warning #179-D: variable "wRxCount1" was declared but never referenced
+"../Source/Can_CarCtl.c", line 138: warning #179-D: variable "wRxCount2" was declared but never referenced
+"../Source/Can_CarCtl.c", line 111: warning #179-D: function "Update_BMS_Info1" was declared but never referenced
+"../Source/Can_CarCtl.c", line 116: warning #179-D: function "Update_BMS_Info2" was declared but never referenced
+"../Source/Can_CarCtl.c", line 121: warning #179-D: function "Update_VCU_Info4" was declared but never referenced
+Finished building: "../Source/Can_CarCtl.c"
+ 
+Building file: "../Source/Can_Console.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Can_Console.d_raw" --obj_directory="Source"  "../Source/Can_Console.c"
+"../Source/Can_Console.c", line 91: warning #179-D: variable "uTempMsg" was declared but never referenced
+"../Source/Can_Console.c", line 92: warning #179-D: variable "puSavedMsg" was declared but never referenced
+Finished building: "../Source/Can_Console.c"
+ 
+Building file: "../Source/Cla_task.cla"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Cla_task.d_raw" --obj_directory="Source"  "../Source/Cla_task.cla"
+"../Source/Cla_task.cla", line 122: warning #179-D: variable "fIntegral" was declared but never referenced
+"../Source/Cla_task.cla", line 97: warning #179-D: function "Convert_Real" was declared but never referenced
+"../Source/Cla_task.cla", line 106: warning #179-D: function "DoSenseLPF" was declared but never referenced
+"../Source/Cla_task.cla", line 119: warning #179-D: function "DoCtrlPI" was declared but never referenced
+"../Source/Cla_task.cla", line 129: warning #179-D: function "LLC_readSensedSignals" was declared but never referenced
+"../Source/Cla_task.cla", line 135: warning #179-D: function "LLC_calculatePWMDutyPeriodPhaseShiftTicks" was declared but never referenced
+"../Source/Cla_task.cla", line 141: warning #179-D: function "LLC_runISR2_primToSecPowerFlow" was declared but never referenced
+Finished building: "../Source/Cla_task.cla"
+ 
+Building file: "../Source/Function.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Function.d_raw" --obj_directory="Source"  "../Source/Function.c"
+"../Source/Function.c", line 316: warning #179-D: variable "i" was declared but never referenced
+"../Source/Function.c", line 322: warning #179-D: variable "Bit_Mask" was declared but never referenced
+"../Source/Function.c", line 323: warning #179-D: variable "FAULT_Display_Addr" was declared but never referenced
+"../Source/Function.c", line 341: warning #179-D: variable "i" was declared but never referenced
+"../Source/Function.c", line 341: warning #179-D: variable "wData" was declared but never referenced
+"../Source/Function.c", line 354: warning #179-D: variable "wPage5Idx" was declared but never referenced
+"../Source/Function.c", line 355: warning #179-D: variable "wPage6Idx" was declared but never referenced
+"../Source/Function.c", line 360: warning #179-D: variable "wIndex" was declared but never referenced
+"../Source/Function.c", line 361: warning #179-D: variable "wIndex_s0" was declared but never referenced
+"../Source/Function.c", line 362: warning #179-D: variable "wIndex_s1" was declared but never referenced
+"../Source/Function.c", line 363: warning #179-D: variable "wIndex_s2" was declared but never referenced
+"../Source/Function.c", line 374: warning #179-D: variable "wStatusH" was declared but never referenced
+"../Source/Function.c", line 377: warning #179-D: variable "uModeTime" was declared but never referenced
+"../Source/Function.c", line 402: warning #179-D: variable "uLdcModeCount" was declared but never referenced
+"../Source/Function.c", line 403: warning #179-D: variable "bIGN_1" was declared but never referenced
+"../Source/Function.c", line 404: warning #179-D: variable "fVCU_LDC_Derate_1" was declared but never referenced
+"../Source/Function.c", line 432: warning #994-D: missing return statement at end of non-void function "Calc_EVSE_I_Ref"
+"../Source/Function.c", line 436: warning #179-D: variable "wCountSum" was declared but never referenced
+"../Source/Function.c", line 271: warning #179-D: function "Change_OpMode" was declared but never referenced
+"../Source/Function.c", line 386: warning #179-D: function "LDC_Start_Command" was declared but never referenced
+"../Source/Function.c", line 391: warning #179-D: function "LDC_Stop_Command" was declared but never referenced
+"../Source/Function.c", line 395: warning #179-D: function "LDC_Clear_Command" was declared but never referenced
+"../Source/Function.c", line 400: warning #179-D: function "Control_LDC" was declared but never referenced
+"../Source/Function.c", line 429: warning #179-D: function "Calc_EVSE_I_Ref" was declared but never referenced
+"../Source/Function.c", line 434: warning #179-D: function "Check_CP" was declared but never referenced
+"../Source/Function.c", line 441: warning #179-D: function "Check_PD" was declared but never referenced
+Finished building: "../Source/Function.c"
+ 
+Building file: "../Source/Main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Main.d_raw" --obj_directory="Source"  "../Source/Main.c"
+"../Source/Main.c", line 592: warning #179-D: variable "uTime" was declared but never referenced
+"../Source/Main.c", line 609: warning #179-D: variable "bV_Rise" was declared but never referenced
+"../Source/Main.c", line 610: warning #179-D: variable "bI_Rise" was declared but never referenced
+"../Source/Main.c", line 626: warning #179-D: variable "wTimeTick1ms" was declared but never referenced
+"../Source/Main.c", line 627: warning #179-D: variable "wCount10ms" was declared but never referenced
+"../Source/Main.c", line 628: warning #179-D: variable "wCount1s" was declared but never referenced
+"../Source/Main.c", line 629: warning #179-D: variable "bRun_1" was declared but never referenced
+"../Source/Main.c", line 630: warning #179-D: variable "dwSROnCount" was declared but never referenced
+"../Source/Main.c", line 631: warning #179-D: variable "wSRTimeTick1ms" was declared but never referenced
+Finished building: "../Source/Main.c"
+ 
+Building file: "../Source/Modbus.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Modbus.d_raw" --obj_directory="Source"  "../Source/Modbus.c"
+"../Source/Modbus.c", line 404: warning #179-D: variable "wCRC" was declared but never referenced
+"../Source/Modbus.c", line 412: warning #179-D: variable "chTemp" was declared but never referenced
+"../Source/Modbus.c", line 419: warning #179-D: variable "i" was declared but never referenced
+"../Source/Modbus.c", line 422: warning #179-D: variable "wPCalibAccessCnt" was declared but never referenced
+"../Source/Modbus.c", line 441: warning #179-D: variable "i" was declared but never referenced
+"../Source/Modbus.c", line 441: warning #179-D: variable "wIndex" was declared but never referenced
+"../Source/Modbus.c", line 442: warning #179-D: variable "wCRC" was declared but never referenced
+"../Source/Modbus.c", line 448: warning #179-D: variable "wCRC" was declared but never referenced
+"../Source/Modbus.c", line 460: warning #179-D: variable "CRC_Hi" was declared but never referenced
+"../Source/Modbus.c", line 461: warning #179-D: variable "CRC_Lo" was declared but never referenced
+"../Source/Modbus.c", line 474: warning #179-D: variable "i" was declared but never referenced
+"../Source/Modbus.c", line 477: warning #179-D: variable "wLCalibAccessCnt" was declared but never referenced
+"../Source/Modbus.c", line 486: warning #179-D: variable "RcvData" was declared but never referenced
+"../Source/Modbus.c", line 497: warning #179-D: variable "RxByte_Size" was declared but never referenced
+"../Source/Modbus.c", line 673: warning #179-D: variable "i" was declared but never referenced
+"../Source/Modbus.c", line 173: warning #179-D: function "Buffer_to_Word" was declared but never referenced
+"../Source/Modbus.c", line 178: warning #179-D: function "Buffer_to_Word_M" was declared but never referenced
+Finished building: "../Source/Modbus.c"
+ 
+Building file: "../Source/Variable.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Variable.d_raw" --obj_directory="Source"  "../Source/Variable.c"
+Finished building: "../Source/Variable.c"
+ 
+Building file: "../Source/Hal/Adc_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Adc_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Adc_hal.c"
+Finished building: "../Source/Hal/Adc_hal.c"
+ 
+Building file: "../Source/Hal/Can_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Can_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Can_hal.c"
+Finished building: "../Source/Hal/Can_hal.c"
+ 
+Building file: "../Source/Hal/Cla_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Cla_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Cla_hal.c"
+Finished building: "../Source/Hal/Cla_hal.c"
+ 
+Building file: "../Source/Hal/Device_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Device_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Device_hal.c"
+Finished building: "../Source/Hal/Device_hal.c"
+ 
+Building file: "../Source/Hal/Gpio_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Gpio_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Gpio_hal.c"
+Finished building: "../Source/Hal/Gpio_hal.c"
+ 
+Building file: "../Source/Hal/I2c_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/I2c_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/I2c_hal.c"
+Finished building: "../Source/Hal/I2c_hal.c"
+ 
+Building file: "../Source/Hal/Linsci_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Linsci_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Linsci_hal.c"
+Finished building: "../Source/Hal/Linsci_hal.c"
+ 
+Building file: "../Source/Hal/Pwm_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Pwm_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Pwm_hal.c"
+Finished building: "../Source/Hal/Pwm_hal.c"
+ 
+Building file: "../Source/Hal/Sci_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Sci_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Sci_hal.c"
+Finished building: "../Source/Hal/Sci_hal.c"
+ 
+Building file: "../Source/Hal/Spi_hal.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/Source/Hal" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/device_support/f28004x/driverlib" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/calibration/hrpwm/f28004x/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/CLAmath/c28/include" --include_path="D:/DSP/_DspProject/OBC_LLC_J7E_210511/C2000Ware/libraries/math/FPUfastRTS/c28/include" --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k --preproc_with_compile --preproc_dependency="Source/Hal/Spi_hal.d_raw" --obj_directory="Source/Hal"  "../Source/Hal/Spi_hal.c"
+Finished building: "../Source/Hal/Spi_hal.c"
+ 
+Building target: "OBC_LLC_J7E_210511.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O2 --opt_for_speed=2 --fp_mode=relaxed --advice:performance=all --define=_DEBUG --define=CLA_DEBUG=2 --define=F28x_DEVICE --define=CPU1 --define=LARGE_MODEL --define=_FLASH -g --c99 --printf_support=minimal --diag_warning=225 --display_error_number --abi=coffabi --cla_background_task=on --cla_signed_compare_workaround=on -k -z -m"OBC_LLC_J7E_210511.map" --stack_size=0x400 --warn_sections -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/lib" --priority --reread_libs --display_error_number --mapfile_contents=all --xml_link_info="OBC_LLC_J7E_210511_linkInfo.xml" --make_static --rom_model -o "OBC_LLC_J7E_210511.out" "./C2000Ware/device_support/f28004x/f28004x_codestartbranch.obj" "./Source/Can_CarCtl.obj" "./Source/Can_Console.obj" "./Source/Cla_task.obj" "./Source/Function.obj" "./Source/Main.obj" "./Source/Modbus.obj" "./Source/Variable.obj" "./Source/Hal/Adc_hal.obj" "./Source/Hal/Can_hal.obj" "./Source/Hal/Cla_hal.obj" "./Source/Hal/Device_hal.obj" "./Source/Hal/Gpio_hal.obj" "./Source/Hal/I2c_hal.obj" "./Source/Hal/Linsci_hal.obj" "./Source/Hal/Pwm_hal.obj" "./Source/Hal/Sci_hal.obj" "./Source/Hal/Spi_hal.obj" "../f28004x_flash_lnk.cmd" "../C2000Ware/libraries/boot_rom/f28004x/F28004x_CLADATROM_Symbols_fpu32.lib" "../C2000Ware/libraries/calibration/hrpwm/f28004x/lib/SFO_v8_fpu_lib_build_c28_driverlib.lib" "../C2000Ware/libraries/calibration/hrpwm/f28004x/lib/SFO_v8_fpu_lib_build_c28_driverlib_coff.lib" "../C2000Ware/libraries/driverlib/driverlib.lib" "../C2000Ware/libraries/driverlib/driverlib_coff.lib" "../C2000Ware/libraries/math/CLAmath/c28/lib/cla2_math_library_datarom_fpu32.lib" "../C2000Ware/libraries/math/FPUfastRTS/c28/lib/rts2800_fpu32_fast_supplement.lib" "../C2000Ware/libraries/math/FPUfastRTS/c28/lib/rts2800_fpu32_fast_supplement_coff.lib"  -llibc.a 
+<Linking>
+Finished building target: "OBC_LLC_J7E_210511.out"
+ 
+Building files: "OBC_LLC_J7E_210511.out"
+Invoking: C2000 Hex Utility
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/hex2000" --boot --sci8 --ascii -o "OBC_LLC_J7E_210511.hex"  "OBC_LLC_J7E_210511.out" 
+Translating to ASCII-Hex format...
+   "OBC_LLC_J7E_210511.out" codestart ==> (BOOT TABLE)
+   "OBC_LLC_J7E_210511.out" .cinit ==> (BOOT TABLE)
+   "OBC_LLC_J7E_210511.out" .econst ==> (BOOT TABLE)
+   "OBC_LLC_J7E_210511.out" .TI.ramfunc ==> (BOOT TABLE)
+   "OBC_LLC_J7E_210511.out" TempTables ==> (BOOT TABLE)
+   "OBC_LLC_J7E_210511.out" Cla1Prog ==> (BOOT TABLE)
+   "OBC_LLC_J7E_210511.out" .text ==> (BOOT TABLE)
+Finished building: "OBC_LLC_J7E_210511.out"
+ 
+
+**** Build Finished ****

@@ -1,0 +1,11 @@
+CONTINUE_REFRESH_INTERVAL=100
+MODULES_MRU_PATH=D\:\\DSP\\_DspProject\\F280049_can_kernel\\CPU1_RAM\\F280049_can_kernel.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.1=D\:\\DSP\\_DspProject\\F280049_sci_kernel\\CPU1_RAM\\F280049_sci_kernel.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.2=D\:\\DSP\\_DspProject\\F280049_Project_v0\\CPU1_FLASH\\F280049_Project_v0.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.3=D\:\\DSP\\_DspProject\\F280049_Project_v0\\CPU1_RAM\\F280049_Project_v0.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.4=D\:\\DSP\\_DspProject\\OBC_LLC_J7E_210511\\Debug\\OBC_LLC_J7E_210511.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.5=D\:\\DSP\\_DspProject\\gpio_ex1_setup\\CPU1_RAM\\gpio_ex1_setup.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.6=D\:\\DSP\\_DspProject\\GPIO_Ex1\\Debug\\GPIO_Ex1.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx
+eclipse.preferences.version=1
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Data<seperator>Texas\ Instruments\ XDS110\ USB\ Debug\ Probe_0\\C28xx_CPU1=0x80000,80000
+useAnnotationsPrefPage=true

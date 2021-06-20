@@ -1,0 +1,28 @@
+
+**** Build of configuration CPU1_RAM for project gpio_ex1_setup ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 6 all -O 
+ 
+Building file: "../device/f28004x_codestartbranch.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/gpio_ex1_setup" --include_path="D:/DSP/_DspProject/gpio_ex1_setup/device" --include_path="C:/ti/c2000/C2000Ware_3_03_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --define=DEBUG --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="device/f28004x_codestartbranch.d_raw" --include_path="D:/DSP/_DspProject/gpio_ex1_setup/CPU1_RAM/syscfg" --obj_directory="device"  "../device/f28004x_codestartbranch.asm"
+Finished building: "../device/f28004x_codestartbranch.asm"
+ 
+Building file: "../device/device.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/gpio_ex1_setup" --include_path="D:/DSP/_DspProject/gpio_ex1_setup/device" --include_path="C:/ti/c2000/C2000Ware_3_03_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --define=DEBUG --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="device/device.d_raw" --include_path="D:/DSP/_DspProject/gpio_ex1_setup/CPU1_RAM/syscfg" --obj_directory="device"  "../device/device.c"
+Finished building: "../device/device.c"
+ 
+Building file: "../gpio_ex1_setup.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/gpio_ex1_setup" --include_path="D:/DSP/_DspProject/gpio_ex1_setup/device" --include_path="C:/ti/c2000/C2000Ware_3_03_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --define=DEBUG --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="gpio_ex1_setup.d_raw" --include_path="D:/DSP/_DspProject/gpio_ex1_setup/CPU1_RAM/syscfg"  "../gpio_ex1_setup.c"
+Finished building: "../gpio_ex1_setup.c"
+ 
+Building target: "gpio_ex1_setup.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --define=DEBUG --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"gpio_ex1_setup.map" --heap_size=0x200 --stack_size=0x3F8 --warn_sections -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --reread_libs --define=RAM --diag_wrap=off --display_error_number --xml_link_info="gpio_ex1_setup_linkInfo.xml" --entry_point=code_start --rom_model -o "gpio_ex1_setup.out" "./gpio_ex1_setup.obj" "./device/device.obj" "./device/f28004x_codestartbranch.obj" "../28004x_generic_ram_lnk.cmd" "C:/ti/c2000/C2000Ware_3_03_00_00/driverlib/f28004x/driverlib/ccs/Debug/driverlib.lib"  -llibc.a 
+<Linking>
+Finished building target: "gpio_ex1_setup.out"
+ 
+
+**** Build Finished ****
