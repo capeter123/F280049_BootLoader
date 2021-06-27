@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v21.6.0                     
 ******************************************************************************
->> Linked Sun Jun 20 19:24:19 2021
+>> Linked Sun Jun 27 23:50:57 2021
 
 OUTPUT FILE NAME:   <F280049_can_kernel.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -16,8 +16,8 @@ PAGE 0:
   RAMM0                 000000f4   0000030c  00000068  000002a4  RWIX
   RAMLS0                00008000   00000800  00000800  00000000  RWIX
   RAMLS1                00008800   00000800  00000800  00000000  RWIX
-  RAMLS2                00009000   00000800  00000800  00000000  RWIX
-  RAMLS3                00009800   00000800  0000070d  000000f3  RWIX
+  RAMLS2                00009000   00000800  000007ff  00000001  RWIX
+  RAMLS3                00009800   00000800  0000072d  000000d3  RWIX
   RAMLS4                0000a000   00000800  00000000  00000800  RWIX
   FLASH_BANK0_SEC0      00080000   00001000  00000000  00001000  RWIX
   FLASH_BANK0_SEC1      00081000   00001000  00000000  00001000  RWIX
@@ -56,7 +56,7 @@ PAGE 0:
 PAGE 1:
   BOOT_RSVD             00000002   000000f1  00000000  000000f1  RWIX
   RAMM1                 00000400   000003f8  00000100  000002f8  RWIX
-  RAMLS5                0000a800   00000800  000004ae  00000352  RWIX
+  RAMLS5                0000a800   00000800  000004b8  00000348  RWIX
   RAMLS6                0000b000   00000800  00000000  00000800  RWIX
   RAMLS7                0000b800   00000800  00000000  00000800  RWIX
   RAMGS0                0000c000   00002000  00000000  00002000  RWIX
@@ -110,32 +110,35 @@ codestart
                   0000ac69    00000002     can_get_function.obj (.econst:_$P$T0$1)
                   0000ac6b    00000002     can_get_function.obj (.econst:_$P$T1$2)
 
-.ebss      1    0000ac6e    00000041     UNINITIALIZED
+.ebss      1    0000ac6e    0000004b     UNINITIALIZED
                   0000ac6e    0000000a     F021_API_F28004x_FPU32.lib : Init.obj (.ebss)
-                  0000ac78    00000006     can_get_function.obj (.ebss)
-                  0000ac7e    00000002     rts2800_fpu32.lib : _lock.c.obj (.ebss:__lock)
+                  0000ac78    00000008     can_get_function.obj (.ebss:_rxMsgData)
                   0000ac80    00000020     boot.obj (.ebss:_erasedAlready)
-                  0000aca0    00000006     rts2800_fpu32.lib : exit.c.obj (.ebss)
-                  0000aca6    00000004     device.obj (.ebss)
-                  0000acaa    00000002     rts2800_fpu32.lib : _lock.c.obj (.ebss:__unlock)
-                  0000acac    00000002     boot.obj (.ebss)
-                  0000acae    00000001     dfu_kernel.obj (.ebss)
+                  0000aca0    00000008     can_get_function.obj (.ebss)
+                  0000aca8    00000006     rts2800_fpu32.lib : exit.c.obj (.ebss)
+                  0000acae    00000004     device.obj (.ebss)
+                  0000acb2    00000002     rts2800_fpu32.lib : _lock.c.obj (.ebss:__lock)
+                  0000acb4    00000002                       : _lock.c.obj (.ebss:__unlock)
+                  0000acb6    00000002     boot.obj (.ebss)
+                  0000acb8    00000001     dfu_kernel.obj (.ebss)
 
 .text.1    0    00008000    00000800     
                   00008000    00000495     boot.obj (.text)
-                  00008495    0000035c     can_get_function.obj (.text)
-                  000087f1    0000000f     F021_API_F28004x_FPU32.lib : Verify.obj (.text:_Fapi_doVerify)
+                  00008495    00000294     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:__Fapi_setupFlashStateMachine)
+                  00008729    000000d1     dfu_kernel.obj (.text)
+                  000087fa    00000002     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_serviceWatchdogTimer)
+                  000087fc    00000002     driverlib_coff.lib : interrupt.obj (.text:_Interrupt_illegalOperationHandler)
+                  000087fe    00000002                        : interrupt.obj (.text:_Interrupt_nmiHandler)
 
 .text.2    0    00008800    00000800     
-                  00008800    00000294     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:__Fapi_setupFlashStateMachine)
-                  00008a94    000001e0                                : Program.obj (.text:_Fapi_issueProgrammingCommand)
-                  00008c74    000001aa     device.obj (.text)
-                  00008e1e    000000e3     driverlib_coff.lib : can.obj (.text:_CAN_setupMessageObject)
-                  00008f01    000000d1     dfu_kernel.obj (.text)
-                  00008fd2    0000002c     F021_API_F28004x_FPU32.lib : Utilities.obj (.text:_Fapi_calculateFletcherChecksum)
-                  00008ffe    00000002                                : FlashStateMachine.obj (.text:_Fapi_serviceWatchdogTimer)
+                  00008800    0000037b     can_get_function.obj (.text)
+                  00008b7b    000001e0     F021_API_F28004x_FPU32.lib : Program.obj (.text:_Fapi_issueProgrammingCommand)
+                  00008d5b    000001aa     device.obj (.text)
+                  00008f05    000000e3     driverlib_coff.lib : can.obj (.text:_CAN_setupMessageObject)
+                  00008fe8    00000017                        : sysctl.obj (.text:_DCC_disableDoneSignal)
+                  00008fff    00000001     rts2800_fpu32.lib : startup.c.obj (.text)
 
-.text.3    0    00009000    00000800     
+.text.3    0    00009000    000007ff     
                   00009000    000000b6     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_setClock)
                   000090b6    000000b2                        : sysctl.obj (.text:_SysCtl_isPLLValid)
                   00009168    000000a7     F021_API_F28004x_FPU32.lib : Init.obj (.text:_Fapi_initializeAPI)
@@ -155,9 +158,8 @@ codestart
                   00009760    00000052     driverlib_coff.lib : dcsm.obj (.text:_DCSM_unlockZone1CSM)
                   000097b2    0000003d                        : interrupt.obj (.text:_Interrupt_initModule)
                   000097ef    00000010                        : sysctl.obj (.text:_DCC_isBaseValid)
-                  000097ff    00000001     rts2800_fpu32.lib : startup.c.obj (.text)
 
-.text.4    0    00009800    0000070d     
+.text.4    0    00009800    0000072d     
                   00009800    00000052     driverlib_coff.lib : dcsm.obj (.text:_DCSM_unlockZone2CSM)
                   00009852    00000052                        : gpio.obj (.text:_GPIO_setPadConfig)
                   000098a4    00000052     F021_API_F28004x_FPU32.lib : Read.obj (.text:__Fapi_checkRegionForValue)
@@ -170,50 +172,49 @@ codestart
                   00009a67    00000031                        : gpio.obj (.text:_GPIO_setDirectionMode)
                   00009a98    00000030     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:__Fapi_issueFsmCommand)
                   00009ac8    0000002f                                : FlashStateMachine.obj (.text:_Fapi_setActiveFlashBank)
-                  00009af7    0000002b                                : FlashStateMachine.obj (.text:__Fapi_setupSectorsForWrite)
-                  00009b22    0000002a                                : Utilities.obj (.text:__Fapi_divideUnsignedLong)
-                  00009b4c    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
-                  00009b75    00000028     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_setupBankSectorEnable)
-                  00009b9d    00000026     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_pollX1Counter)
-                  00009bc3    00000025                        : sysctl.obj (.text:_DCC_enableSingleShotMode)
-                  00009be8    00000024                        : sysctl.obj (.text:_SysCtl_selectXTAL)
-                  00009c0c    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
-                  00009c30    00000023     driverlib_coff.lib : can.obj (.text:_CAN_writeDataReg)
-                  00009c53    00000023     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_isAddressEcc)
-                  00009c76    00000022     codestartbranch.obj (.text)
-                  00009c98    00000020     driverlib_coff.lib : interrupt.obj (.text:_Interrupt_initVectorTable)
-                  00009cb8    0000001f                        : sysctl.obj (.text:_DCC_setCounter1ClkSource)
-                  00009cd7    0000001e                        : can.obj (.text:_CAN_initModule)
-                  00009cf5    0000001d                        : sysctl.obj (.text:_DCC_setCounter0ClkSource)
-                  00009d12    0000001d     rts2800_fpu32.lib : memcpy.c.obj (.text)
-                  00009d2f    0000001b     driverlib_coff.lib : can.obj (.text:_CAN_initRAM)
-                  00009d4a    0000001b                        : can.obj (.text:_CAN_readDataReg)
-                  00009d65    0000001a                        : sysctl.obj (.text:_SysCtl_getLowSpeedClock)
-                  00009d7f    0000001a                        : sysctl.obj (.text:_SysCtl_selectXTALSingleEnded)
-                  00009d99    00000017                        : sysctl.obj (.text:_DCC_disableDoneSignal)
-                  00009db0    00000017                        : sysctl.obj (.text:_DCC_enableDoneSignal)
-                  00009dc7    00000017                        : sysctl.obj (.text:_SysCtl_enablePeripheral)
-                  00009dde    00000016                        : sysctl.obj (.text:_DCC_clearDoneFlag)
-                  00009df4    00000016                        : sysctl.obj (.text:_DCC_clearErrorFlag)
-                  00009e0a    00000016                        : sysctl.obj (.text:_DCC_disableErrorSignal)
-                  00009e20    00000016                        : sysctl.obj (.text:_DCC_enableErrorSignal)
-                  00009e36    00000015                        : can.obj (.text:_CAN_isBaseValid)
-                  00009e4b    00000014                        : sysctl.obj (.text:_DCC_disableModule)
-                  00009e5f    00000014                        : sysctl.obj (.text:_DCC_enableModule)
-                  00009e73    00000014                        : gpio.obj (.text:_GPIO_isPinValid)
-                  00009e87    00000013     F021_API_F28004x_FPU32.lib : Read.obj (.text:_Fapi_flushPipeline)
-                  00009e9a    00000012     rts2800_fpu32.lib : args_main.c.obj (.text)
-                  00009eac    0000000f     F021_API_F28004x_FPU32.lib : Utilities.obj (.text:__Fapi_scaleCycleValues)
-                  00009ebb    0000000e     driverlib_coff.lib : interrupt.obj (.text:_Interrupt_defaultHandler)
-                  00009ec9    0000000d                        : interrupt.obj (.text:_Interrupt_disableMaster)
-                  00009ed6    0000000b     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_checkFsmForReady)
-                  00009ee1    0000000b     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_isMCDClockFailureDetected)
-                  00009eec    0000000b     F021_API_F28004x_FPU32.lib : Utilities.obj (.text:__Fapi_calculateOtpChecksum)
-                  00009ef7    00000009     rts2800_fpu32.lib : _lock.c.obj (.text)
-                  00009f00    00000007     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_resetMCD)
-                  00009f07    00000002                        : interrupt.obj (.text:_Interrupt_illegalOperationHandler)
-                  00009f09    00000002                        : interrupt.obj (.text:_Interrupt_nmiHandler)
-                  00009f0b    00000002     rts2800_fpu32.lib : pre_init.c.obj (.text)
+                  00009af7    0000002c                                : Utilities.obj (.text:_Fapi_calculateFletcherChecksum)
+                  00009b23    0000002b                                : FlashStateMachine.obj (.text:__Fapi_setupSectorsForWrite)
+                  00009b4e    0000002a                                : Utilities.obj (.text:__Fapi_divideUnsignedLong)
+                  00009b78    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
+                  00009ba1    00000028     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_setupBankSectorEnable)
+                  00009bc9    00000026     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_pollX1Counter)
+                  00009bef    00000025                        : sysctl.obj (.text:_DCC_enableSingleShotMode)
+                  00009c14    00000024                        : sysctl.obj (.text:_SysCtl_selectXTAL)
+                  00009c38    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
+                  00009c5c    00000023     driverlib_coff.lib : can.obj (.text:_CAN_writeDataReg)
+                  00009c7f    00000023     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_isAddressEcc)
+                  00009ca2    00000022     codestartbranch.obj (.text)
+                  00009cc4    00000020     driverlib_coff.lib : interrupt.obj (.text:_Interrupt_initVectorTable)
+                  00009ce4    0000001f                        : sysctl.obj (.text:_DCC_setCounter1ClkSource)
+                  00009d03    0000001e                        : can.obj (.text:_CAN_initModule)
+                  00009d21    0000001d                        : sysctl.obj (.text:_DCC_setCounter0ClkSource)
+                  00009d3e    0000001d     rts2800_fpu32.lib : memcpy.c.obj (.text)
+                  00009d5b    0000001b     driverlib_coff.lib : can.obj (.text:_CAN_initRAM)
+                  00009d76    0000001b                        : can.obj (.text:_CAN_readDataReg)
+                  00009d91    0000001a                        : sysctl.obj (.text:_SysCtl_getLowSpeedClock)
+                  00009dab    0000001a                        : sysctl.obj (.text:_SysCtl_selectXTALSingleEnded)
+                  00009dc5    00000017                        : sysctl.obj (.text:_DCC_enableDoneSignal)
+                  00009ddc    00000017                        : sysctl.obj (.text:_SysCtl_enablePeripheral)
+                  00009df3    00000016                        : sysctl.obj (.text:_DCC_clearDoneFlag)
+                  00009e09    00000016                        : sysctl.obj (.text:_DCC_clearErrorFlag)
+                  00009e1f    00000016                        : sysctl.obj (.text:_DCC_disableErrorSignal)
+                  00009e35    00000016                        : sysctl.obj (.text:_DCC_enableErrorSignal)
+                  00009e4b    00000015                        : can.obj (.text:_CAN_isBaseValid)
+                  00009e60    00000014                        : sysctl.obj (.text:_DCC_disableModule)
+                  00009e74    00000014                        : sysctl.obj (.text:_DCC_enableModule)
+                  00009e88    00000014                        : gpio.obj (.text:_GPIO_isPinValid)
+                  00009e9c    00000013     F021_API_F28004x_FPU32.lib : Read.obj (.text:_Fapi_flushPipeline)
+                  00009eaf    00000012     rts2800_fpu32.lib : args_main.c.obj (.text)
+                  00009ec1    0000000f     F021_API_F28004x_FPU32.lib : Verify.obj (.text:_Fapi_doVerify)
+                  00009ed0    0000000f                                : Utilities.obj (.text:__Fapi_scaleCycleValues)
+                  00009edf    0000000e     driverlib_coff.lib : interrupt.obj (.text:_Interrupt_defaultHandler)
+                  00009eed    0000000d                        : interrupt.obj (.text:_Interrupt_disableMaster)
+                  00009efa    0000000b     F021_API_F28004x_FPU32.lib : FlashStateMachine.obj (.text:_Fapi_checkFsmForReady)
+                  00009f05    0000000b     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_isMCDClockFailureDetected)
+                  00009f10    0000000b     F021_API_F28004x_FPU32.lib : Utilities.obj (.text:__Fapi_calculateOtpChecksum)
+                  00009f1b    00000009     rts2800_fpu32.lib : _lock.c.obj (.text)
+                  00009f24    00000007     driverlib_coff.lib : sysctl.obj (.text:_SysCtl_resetMCD)
+                  00009f2b    00000002     rts2800_fpu32.lib : pre_init.c.obj (.text)
 
 MODULE SUMMARY
 
@@ -221,13 +222,13 @@ MODULE SUMMARY
        ------                  ----   ----------------   ------------------
     .\
        boot.obj                1173   35                 34                
-       can_get_function.obj    860    71                 6                 
+       can_get_function.obj    891    71                 16                
        dfu_kernel.obj          238    138                1                 
        erase.obj               83     64                 0                 
        can_boot.obj            58     0                  0                 
        codestartbranch.obj     36     0                  0                 
     +--+-----------------------+------+------------------+--------------------+
-       Total:                  2448   308                41                
+       Total:                  2479   308                51                
                                                                            
     .\device\
        device.obj              426    29                 4                 
@@ -270,7 +271,7 @@ MODULE SUMMARY
                                                                            
        Stack:                  0      0                  256               
     +--+-----------------------+------+------------------+--------------------+
-       Grand Total:            7984   1199               321               
+       Grand Total:            8015   1199               331               
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -282,19 +283,22 @@ address     data page           name
 0000ac16     2b0 (0000ac00)     _sectAddress
 
 0000ac6e     2b1 (0000ac40)     _Fapi_GlobalInit
-0000ac78     2b1 (0000ac40)     _checksum
-0000ac7a     2b1 (0000ac40)     _statusCode
-0000ac7e     2b1 (0000ac40)     __lock
+0000ac78     2b1 (0000ac40)     _rxMsgData
 
 0000ac80     2b2 (0000ac80)     _erasedAlready
-0000aca0     2b2 (0000ac80)     ___TI_enable_exit_profile_output
-0000aca2     2b2 (0000ac80)     ___TI_cleanup_ptr
-0000aca4     2b2 (0000ac80)     ___TI_dtors_ptr
-0000aca6     2b2 (0000ac80)     _Example_PassCount
-0000aca8     2b2 (0000ac80)     _Example_Fail
-0000acaa     2b2 (0000ac80)     __unlock
-0000acac     2b2 (0000ac80)     _getWordData
-0000acae     2b2 (0000ac80)     _u16_modeSw
+0000aca0     2b2 (0000ac80)     _checksum
+0000aca1     2b2 (0000ac80)     _rxMsg
+0000aca2     2b2 (0000ac80)     _txMsg
+0000aca4     2b2 (0000ac80)     _statusCode
+0000aca8     2b2 (0000ac80)     ___TI_enable_exit_profile_output
+0000acaa     2b2 (0000ac80)     ___TI_cleanup_ptr
+0000acac     2b2 (0000ac80)     ___TI_dtors_ptr
+0000acae     2b2 (0000ac80)     _Example_PassCount
+0000acb0     2b2 (0000ac80)     _Example_Fail
+0000acb2     2b2 (0000ac80)     __lock
+0000acb4     2b2 (0000ac80)     __unlock
+0000acb6     2b2 (0000ac80)     _getWordData
+0000acb8     2b2 (0000ac80)     _u16_modeSw
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -302,36 +306,36 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                              
 ----  -------   ----                              
 abs   ffffffff  .text                             
-0     00009b4c  C$$EXIT                           
+0     00009b78  C$$EXIT                           
 0     0000920f  FS$$DIV                           
-0     00009cd7  _CAN_initModule                   
+0     00009d03  _CAN_initModule                   
 0     0000940c  _CAN_readMessage                  
 0     00009317  _CAN_sendMessage                  
 0     0000954a  _CAN_setBitRate                   
 0     0000947c  _CAN_setBitTiming                 
-0     00008e1e  _CAN_setupMessageObject           
+0     00008f05  _CAN_setupMessageObject           
 0     00009760  _DCSM_unlockZone1CSM              
 0     00009800  _DCSM_unlockZone2CSM              
-0     00008d2a  _Device_enableAllPeripherals      
-0     00008cd9  _Device_init                      
-0     00008e07  _Device_initGPIO                  
+0     00008e11  _Device_enableAllPeripherals      
+0     00008dc0  _Device_init                      
+0     00008eee  _Device_initGPIO                  
 0     00000152  _Error                            
-1     0000aca8  _Example_Fail                     
-1     0000aca6  _Example_PassCount                
-0     00009c80  _ExitBoot                         
+1     0000acb0  _Example_Fail                     
+1     0000acae  _Example_PassCount                
+0     00009cac  _ExitBoot                         
 1     0000ac6e  _Fapi_GlobalInit                  
-0     00008fd2  _Fapi_calculateFletcherChecksum   
-0     00009ed6  _Fapi_checkFsmForReady            
+0     00009af7  _Fapi_calculateFletcherChecksum   
+0     00009efa  _Fapi_checkFsmForReady            
 0     000096b8  _Fapi_doBlankCheck                
-0     000087f1  _Fapi_doVerify                    
-0     00009e87  _Fapi_flushPipeline               
+0     00009ec1  _Fapi_doVerify                    
+0     00009e9c  _Fapi_flushPipeline               
 0     00009168  _Fapi_initializeAPI               
-0     00009c53  _Fapi_isAddressEcc                
+0     00009c7f  _Fapi_isAddressEcc                
 0     000094e6  _Fapi_issueAsyncCommandWithAddress
-0     00008a94  _Fapi_issueProgrammingCommand     
-0     00008ffe  _Fapi_serviceWatchdogTimer        
+0     00008b7b  _Fapi_issueProgrammingCommand     
+0     000087fa  _Fapi_serviceWatchdogTimer        
 0     00009ac8  _Fapi_setActiveFlashBank          
-0     00009b75  _Fapi_setupBankSectorEnable       
+0     00009ba1  _Fapi_setupBankSectorEnable       
 0     000095ab  _Fapi_setupEepromSectorEnable     
 0     00009983  _GPIO_setAnalogMode               
 0     00009a67  _GPIO_setDirectionMode            
@@ -340,80 +344,84 @@ abs   ffffffff  .text
 0     000099f8  _GPIO_setQualificationMode        
 0     00009947  _GPIO_setQualificationPeriod      
 0     000097b2  _Interrupt_initModule             
-0     00009c98  _Interrupt_initVectorTable        
+0     00009cc4  _Interrupt_initVectorTable        
 0     00000158  _SysCtl_delay                     
 0     000098f6  _SysCtl_getClock                  
-0     00009d65  _SysCtl_getLowSpeedClock          
+0     00009d91  _SysCtl_getLowSpeedClock          
 0     000090b6  _SysCtl_isPLLValid                
 0     00009607  _SysCtl_selectOscSource           
-0     00009be8  _SysCtl_selectXTAL                
-0     00009d7f  _SysCtl_selectXTALSingleEnded     
+0     00009c14  _SysCtl_selectXTAL                
+0     00009dab  _SysCtl_selectXTALSingleEnded     
 0     00009000  _SysCtl_setClock                  
-0     00009eec  __Fapi_calculateOtpChecksum       
+0     00009f10  __Fapi_calculateOtpChecksum       
 0     000098a4  __Fapi_checkRegionForValue        
-0     00009b22  __Fapi_divideUnsignedLong         
+0     00009b4e  __Fapi_divideUnsignedLong         
 0     00009a98  __Fapi_issueFsmCommand            
 0     00009297  __Fapi_loopRegionForValue         
-0     00009eac  __Fapi_scaleCycleValues           
-0     00009af7  __Fapi_setupSectorsForWrite       
+0     00009ed0  __Fapi_scaleCycleValues           
+0     00009b23  __Fapi_setupSectorsForWrite       
 1     00000500  __STACK_END                       
 abs   00000100  __STACK_SIZE                      
-1     0000aca2  ___TI_cleanup_ptr                 
-1     0000aca4  ___TI_dtors_ptr                   
-1     0000aca0  ___TI_enable_exit_profile_output  
+1     0000acaa  ___TI_cleanup_ptr                 
+1     0000acac  ___TI_dtors_ptr                   
+1     0000aca8  ___TI_enable_exit_profile_output  
 abs   ffffffff  ___TI_pprof_out_hndl              
 abs   ffffffff  ___TI_prof_data_size              
 abs   ffffffff  ___TI_prof_data_start             
 abs   ffffffff  ___binit__                        
 abs   ffffffff  ___c_args__                       
 0     000000f4  ___cinit__                        
-0     00008e17  ___error__                        
+0     00008efe  ___error__                        
 abs   ffffffff  ___etext__                        
 abs   ffffffff  ___pinit__                        
 abs   ffffffff  ___text__                         
-0     00009e9a  __args_main                       
-1     0000ac7e  __lock                            
-0     00009eff  __nop                             
-0     00009efb  __register_lock                   
-0     00009ef7  __register_unlock                 
+0     00009eaf  __args_main                       
+1     0000acb2  __lock                            
+0     00009f23  __nop                             
+0     00009f1f  __register_lock                   
+0     00009f1b  __register_unlock                 
 1     00000400  __stack                           
-0     000097ff  __system_post_cinit               
-0     00009f0b  __system_pre_init                 
-1     0000acaa  __unlock                          
-0     00009b4c  _abort                            
+0     00008fff  __system_post_cinit               
+0     00009f2b  __system_pre_init                 
+1     0000acb4  __unlock                          
+0     00009b78  _abort                            
 0     00009662  _c_int00                          
 0     000099be  _canBoot                          
-0     00008688  _canCheck                         
-0     0000877e  _canFlush                         
-0     00008546  _canGetFunction                   
-0     00008615  _canGetOnlyWordData               
-0     000086d6  _canGetPacket                     
-0     000085f3  _canGetWordData                   
-0     00008637  _canInit                          
-0     00008677  _canPinmuxOption                  
-0     000086b6  _canReadMsg                       
-0     000087bb  _canSendChecksum                  
-0     00008786  _canSendWord                      
-1     0000ac78  _checksum                         
+0     000089ff  _canCheck                         
+0     00008af8  _canFlush                         
+0     000088b1  _canGetFunction                   
+0     00008986  _canGetOnlyWordData               
+0     00008a4c  _canGetPacket                     
+0     0000895e  _canGetWordData                   
+0     000089ae  _canInit                          
+0     00008b54  _canKeyCheck                      
+0     000089ee  _canPinmuxOption                  
+0     00008a2c  _canReadMsg                       
+0     00008b35  _canSendChecksum                  
+0     00008b00  _canSendWord                      
+1     0000aca0  _checksum                         
 0     00008000  _copyData                         
-0     00009c0c  _copy_in                          
+0     00009c38  _copy_in                          
 1     0000ac80  _erasedAlready                    
-0     00009b4e  _exit                             
+0     00009b7a  _exit                             
 0     000081ea  _findSector                       
 0     0000846d  _findSize                         
 0     00008473  _getLongData                      
-1     0000acac  _getWordData                      
-0     00008fb6  _initFlashSectors                 
-0     00008f71  _main                             
-0     00009d12  _memcpy                           
+1     0000acb6  _getWordData                      
+0     000087de  _initFlashSectors                 
+0     00008799  _main                             
+0     00009d3e  _memcpy                           
 0     00008485  _readReservedFn                   
-0     0000871b  _sciSendPacket                    
+1     0000aca1  _rxMsg                            
+1     0000ac78  _rxMsgData                        
+0     00008a95  _sciSendPacket                    
 1     0000ac16  _sectAddress                      
-0     00008767  _sendACK                          
-0     00008750  _sendNAK                          
+0     00008ae1  _sendACK                          
+0     00008aca  _sendNAK                          
 0     0000970d  _sharedErase                      
-1     0000ac7a  _statusCode                       
-1     0000acae  _u16_modeSw                       
+1     0000aca4  _statusCode                       
+1     0000aca2  _txMsg                            
+1     0000acb8  _u16_modeSw                       
 abs   ffffffff  binit                             
 0     000000f4  cinit                             
 0     00000000  code_start                        
@@ -435,31 +443,31 @@ page  address   name
 0     0000846d  _findSize                         
 0     00008473  _getLongData                      
 0     00008485  _readReservedFn                   
-0     00008546  _canGetFunction                   
-0     000085f3  _canGetWordData                   
-0     00008615  _canGetOnlyWordData               
-0     00008637  _canInit                          
-0     00008677  _canPinmuxOption                  
-0     00008688  _canCheck                         
-0     000086b6  _canReadMsg                       
-0     000086d6  _canGetPacket                     
-0     0000871b  _sciSendPacket                    
-0     00008750  _sendNAK                          
-0     00008767  _sendACK                          
-0     0000877e  _canFlush                         
-0     00008786  _canSendWord                      
-0     000087bb  _canSendChecksum                  
-0     000087f1  _Fapi_doVerify                    
-0     00008a94  _Fapi_issueProgrammingCommand     
-0     00008cd9  _Device_init                      
-0     00008d2a  _Device_enableAllPeripherals      
-0     00008e07  _Device_initGPIO                  
-0     00008e17  ___error__                        
-0     00008e1e  _CAN_setupMessageObject           
-0     00008f71  _main                             
-0     00008fb6  _initFlashSectors                 
-0     00008fd2  _Fapi_calculateFletcherChecksum   
-0     00008ffe  _Fapi_serviceWatchdogTimer        
+0     00008799  _main                             
+0     000087de  _initFlashSectors                 
+0     000087fa  _Fapi_serviceWatchdogTimer        
+0     000088b1  _canGetFunction                   
+0     0000895e  _canGetWordData                   
+0     00008986  _canGetOnlyWordData               
+0     000089ae  _canInit                          
+0     000089ee  _canPinmuxOption                  
+0     000089ff  _canCheck                         
+0     00008a2c  _canReadMsg                       
+0     00008a4c  _canGetPacket                     
+0     00008a95  _sciSendPacket                    
+0     00008aca  _sendNAK                          
+0     00008ae1  _sendACK                          
+0     00008af8  _canFlush                         
+0     00008b00  _canSendWord                      
+0     00008b35  _canSendChecksum                  
+0     00008b54  _canKeyCheck                      
+0     00008b7b  _Fapi_issueProgrammingCommand     
+0     00008dc0  _Device_init                      
+0     00008e11  _Device_enableAllPeripherals      
+0     00008eee  _Device_initGPIO                  
+0     00008efe  ___error__                        
+0     00008f05  _CAN_setupMessageObject           
+0     00008fff  __system_post_cinit               
 0     00009000  _SysCtl_setClock                  
 0     000090b6  _SysCtl_isPLLValid                
 0     00009168  _Fapi_initializeAPI               
@@ -477,7 +485,6 @@ page  address   name
 0     0000970d  _sharedErase                      
 0     00009760  _DCSM_unlockZone1CSM              
 0     000097b2  _Interrupt_initModule             
-0     000097ff  __system_post_cinit               
 0     00009800  _DCSM_unlockZone2CSM              
 0     00009852  _GPIO_setPadConfig                
 0     000098a4  __Fapi_checkRegionForValue        
@@ -490,46 +497,51 @@ page  address   name
 0     00009a67  _GPIO_setDirectionMode            
 0     00009a98  __Fapi_issueFsmCommand            
 0     00009ac8  _Fapi_setActiveFlashBank          
-0     00009af7  __Fapi_setupSectorsForWrite       
-0     00009b22  __Fapi_divideUnsignedLong         
-0     00009b4c  C$$EXIT                           
-0     00009b4c  _abort                            
-0     00009b4e  _exit                             
-0     00009b75  _Fapi_setupBankSectorEnable       
-0     00009be8  _SysCtl_selectXTAL                
-0     00009c0c  _copy_in                          
-0     00009c53  _Fapi_isAddressEcc                
-0     00009c80  _ExitBoot                         
-0     00009c98  _Interrupt_initVectorTable        
-0     00009cd7  _CAN_initModule                   
-0     00009d12  _memcpy                           
-0     00009d65  _SysCtl_getLowSpeedClock          
-0     00009d7f  _SysCtl_selectXTALSingleEnded     
-0     00009e87  _Fapi_flushPipeline               
-0     00009e9a  __args_main                       
-0     00009eac  __Fapi_scaleCycleValues           
-0     00009ed6  _Fapi_checkFsmForReady            
-0     00009eec  __Fapi_calculateOtpChecksum       
-0     00009ef7  __register_unlock                 
-0     00009efb  __register_lock                   
-0     00009eff  __nop                             
-0     00009f0b  __system_pre_init                 
+0     00009af7  _Fapi_calculateFletcherChecksum   
+0     00009b23  __Fapi_setupSectorsForWrite       
+0     00009b4e  __Fapi_divideUnsignedLong         
+0     00009b78  C$$EXIT                           
+0     00009b78  _abort                            
+0     00009b7a  _exit                             
+0     00009ba1  _Fapi_setupBankSectorEnable       
+0     00009c14  _SysCtl_selectXTAL                
+0     00009c38  _copy_in                          
+0     00009c7f  _Fapi_isAddressEcc                
+0     00009cac  _ExitBoot                         
+0     00009cc4  _Interrupt_initVectorTable        
+0     00009d03  _CAN_initModule                   
+0     00009d3e  _memcpy                           
+0     00009d91  _SysCtl_getLowSpeedClock          
+0     00009dab  _SysCtl_selectXTALSingleEnded     
+0     00009e9c  _Fapi_flushPipeline               
+0     00009eaf  __args_main                       
+0     00009ec1  _Fapi_doVerify                    
+0     00009ed0  __Fapi_scaleCycleValues           
+0     00009efa  _Fapi_checkFsmForReady            
+0     00009f10  __Fapi_calculateOtpChecksum       
+0     00009f1b  __register_unlock                 
+0     00009f1f  __register_lock                   
+0     00009f23  __nop                             
+0     00009f2b  __system_pre_init                 
 1     00000400  __stack                           
 1     00000500  __STACK_END                       
 1     0000ac16  _sectAddress                      
 1     0000ac6e  _Fapi_GlobalInit                  
-1     0000ac78  _checksum                         
-1     0000ac7a  _statusCode                       
-1     0000ac7e  __lock                            
+1     0000ac78  _rxMsgData                        
 1     0000ac80  _erasedAlready                    
-1     0000aca0  ___TI_enable_exit_profile_output  
-1     0000aca2  ___TI_cleanup_ptr                 
-1     0000aca4  ___TI_dtors_ptr                   
-1     0000aca6  _Example_PassCount                
-1     0000aca8  _Example_Fail                     
-1     0000acaa  __unlock                          
-1     0000acac  _getWordData                      
-1     0000acae  _u16_modeSw                       
+1     0000aca0  _checksum                         
+1     0000aca1  _rxMsg                            
+1     0000aca2  _txMsg                            
+1     0000aca4  _statusCode                       
+1     0000aca8  ___TI_enable_exit_profile_output  
+1     0000acaa  ___TI_cleanup_ptr                 
+1     0000acac  ___TI_dtors_ptr                   
+1     0000acae  _Example_PassCount                
+1     0000acb0  _Example_Fail                     
+1     0000acb2  __lock                            
+1     0000acb4  __unlock                          
+1     0000acb6  _getWordData                      
+1     0000acb8  _u16_modeSw                       
 abs   00000100  __STACK_SIZE                      
 abs   ffffffff  .text                             
 abs   ffffffff  ___TI_pprof_out_hndl              
@@ -544,4 +556,4 @@ abs   ffffffff  binit
 abs   ffffffff  etext                             
 abs   ffffffff  pinit                             
 
-[118 symbols]
+[122 symbols]

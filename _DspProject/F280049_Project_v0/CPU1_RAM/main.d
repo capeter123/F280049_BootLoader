@@ -1,7 +1,7 @@
 # FIXED
 
 main.obj: ../main.c
-main.obj: D:/DSP/_DspProject/_F280049_Project_v0/device/driverlib.h
+main.obj: D:/DSP/_DspProject/F280049_Project_v0/device/driverlib.h
 main.obj: C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/inc/hw_memmap.h
 main.obj: C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/adc.h
 main.obj: C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include/stdbool.h
@@ -92,10 +92,10 @@ main.obj: C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/inc/hw_sd
 main.obj: C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/spi.h
 main.obj: C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/inc/hw_spi.h
 main.obj: C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/version.h
-main.obj: D:/DSP/_DspProject/_F280049_Project_v0/device/device.h
+main.obj: D:/DSP/_DspProject/F280049_Project_v0/device/device.h
 
 ../main.c: 
-D:/DSP/_DspProject/_F280049_Project_v0/device/driverlib.h: 
+D:/DSP/_DspProject/F280049_Project_v0/device/driverlib.h: 
 C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/inc/hw_memmap.h: 
 C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/adc.h: 
 C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include/stdbool.h: 
@@ -186,4 +186,4 @@ C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/inc/hw_sdfm.h:
 C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/spi.h: 
 C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/inc/hw_spi.h: 
 C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/version.h: 
-D:/DSP/_DspProject/_F280049_Project_v0/device/device.h: 
+D:/DSP/_DspProject/F280049_Project_v0/device/device.h: 

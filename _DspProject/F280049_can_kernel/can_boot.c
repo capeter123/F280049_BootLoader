@@ -26,6 +26,8 @@ extern StatusCode statusCode;
 //
 extern uint16fptr getWordData;
 
+extern uint16_t txMsgData[8];
+extern uint16_t rxMsgData[8];
 //
 // Function Prototypes
 //

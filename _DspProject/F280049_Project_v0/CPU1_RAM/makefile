@@ -127,34 +127,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-_F280049_Project_v0.out \
+F280049_Project_v0.out \
 
 EXE_OUTPUTS__QUOTED += \
-"_F280049_Project_v0.out" \
+"F280049_Project_v0.out" \
 
 BIN_OUTPUTS += \
-_F280049_Project_v0.txt \
+F280049_Project_v0.txt \
 
 BIN_OUTPUTS__QUOTED += \
-"_F280049_Project_v0.txt" \
+"F280049_Project_v0.txt" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "_F280049_Project_v0.out" secondary-outputs
+	@$(MAKE) --no-print-directory -Onone "F280049_Project_v0.out" secondary-outputs
 
 # Tool invocations
-_F280049_Project_v0.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+F280049_Project_v0.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --advice:performance=all --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"_F280049_Project_v0.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="_F280049_Project_v0_linkInfo.xml" --entry_point=code_start --rom_model -o "_F280049_Project_v0.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --advice:performance=all --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"F280049_Project_v0.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="F280049_Project_v0_linkInfo.xml" --entry_point=code_start --rom_model -o "F280049_Project_v0.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-_F280049_Project_v0.txt: $(EXE_OUTPUTS)
+F280049_Project_v0.txt: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/hex2000" --linkerfill --boot --sci8 --ascii -o "_F280049_Project_v0.txt" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/hex2000" --linkerfill --boot --sci8 --ascii -o "F280049_Project_v0.txt" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

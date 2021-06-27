@@ -39,6 +39,7 @@ uint32_t canGetFunction(uint32_t BootMode);
 inline uint16_t canGetACK(void);
 void canSendWord(uint16_t word);
 void canSendChecksum(void);
+void canKeyCheck(uint16_t word);
 
 //
 // Function Prototypes (External)
@@ -69,8 +70,10 @@ uint16_t checksum;
 //
 extern uint16fptr getWordData;
 
-uint16_t txMsgData[2];
-uint16_t rxMsgData[2];
+uint16_t txMsgData[8];
+uint16_t rxMsgData[8];
+uint16_t rxMsg;
+uint16_t txMsg;
 
 //
 // Function Prototypes (Private)
@@ -82,10 +85,11 @@ uint32_t canGetFunction(uint32_t BootMode)
 {
     volatile uint32_t EntryAddr;
     uint16_t command;
-    uint16_t data[10]; // 16*10 = 128 + 32
+    uint16_t data[10] = {0, }; // 16*10 = 128 + 32
     uint16_t length;
 
-    uint16_t wordData[2];
+    uint16_t wordData[2] = {0, };
+    uint16_t tmp = 0;
 
     //
     // Assign GetWordData to the SCI-A version of the
@@ -97,15 +101,13 @@ uint32_t canGetFunction(uint32_t BootMode)
     // Initialize the CAN-A port for communications with the host.
     //
     canInit(BootMode);
-    //canCheck();
+    //canCheck(); // check can communication
+    canKeyCheck(0xAA55);
 
     //
     // check CAN communication similar to the SCI_lockAutobaud(SCIA_BASE)
     // echo back the CAN communication success
-    uint16_t tmp = canReadMsg();
-    wordData[0] = tmp & 0x00FF;
-    wordData[1] = (tmp >> 8) & 0x00FF;
-    CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, wordData);
+    canKeyCheck(0xCC33);
 
     //
     // get user command through console.
@@ -295,6 +297,10 @@ uint16_t canGetWordData(void)
     // form checksum
     checksum += wordData[0] + wordData[1];
 
+    // monitor
+    rxMsgData[0] = wordData[0];
+    rxMsgData[1] = wordData[1];
+
     // form the wordData form the MSB:LSB
     //wordData |= (byteData << 8);
 
@@ -331,6 +337,10 @@ uint16_t canGetOnlyWordData(void)
 
     // compute checksum
     checksum += wordData[0] + wordData[1];
+
+    // monitor
+    rxMsgData[0] = wordData[0];
+    rxMsgData[1] = wordData[1];
 
     return (wordData[0] + (wordData[1] << 8));
 }
@@ -420,7 +430,8 @@ uint16_t canCheck(void)
     //
     // Wait until we correctly read an 'A' or 'a' and lock
     //
-    do {
+    //do {
+    while(1) {
         // wait until received data from MBOX1
         while(CAN_getNewDataFlags(CANA_BASE) != RX_MSG_OBJ_ID)
         {
@@ -433,15 +444,15 @@ uint16_t canCheck(void)
 
         }
 
-        //rxMsgData[0] = byteData[0];
-        //rxMsgData[1] = byteData[1];
+        rxMsgData[0] = wordData[0];
+        rxMsgData[1] = wordData[1];
 
         // echo
         CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, wordData);
 
         //DEVICE_DELAY_US(500000);
     }
-    while(wordData[0] != 0x41);
+    //while(wordData[0] != 0x41);
 
     return (wordData[0] + (wordData[1] << 8));
 }
@@ -657,19 +668,36 @@ void canSendChecksum(void)
 
     // send LSB of word
     byteData[0] = checksum & 0xFF;
-    byteData[1] = checksum & 0xFF;
-    CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, byteData);
+    //byteData[0] = checksum & 0xFF;
+    //CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, byteData);
 
-    canFlush();
-    canGetACK();
+    //canFlush();
+    //canGetACK();
 
     // send MSB of word
-    byteData[0] = (checksum>>8) & 0xFF;
-    byteData[0] = (checksum>>8) & 0xFF;
+    byteData[1] = (checksum>>8) & 0xFF;
+    //byteData[0] = (checksum>>8) & 0xFF;
     CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, byteData);
 
     canFlush();
     canGetACK();
+}
+
+void canKeyCheck(uint16_t word)
+{
+    uint16_t tmp;
+    uint16_t wordData[2] = {0, };
+
+    do {
+        tmp = canReadMsg();
+        wordData[0] = tmp & 0x00FF;
+        wordData[1] = (tmp >> 8) & 0x00FF;
+        CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, wordData);
+    }
+    while (tmp != word);
+
+    rxMsgData[0] = wordData[0];
+    rxMsgData[1] = wordData[1];
 }
 
 
