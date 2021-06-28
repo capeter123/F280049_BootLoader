@@ -124,6 +124,9 @@ void copyData()
         Fapi_FlashStatusWordType oFlashStatusWord;
 
         BlockHeader.DestAddr = getLongData();
+
+        i = 0; // break point
+
         for (i = 0; i < BlockHeader.BlockSize; i += 0)
         {
             if (BlockHeader.BlockSize < BUFFER_SIZE)
@@ -279,6 +282,7 @@ void copyData()
                 } //check if miniBuffer does not contain all already erased data
                 BlockHeader.DestAddr += 0x4;
             } //for(int k); loads miniBuffer with Buffer elements
+
 #if checksum_enable
             canSendChecksum();
 #endif

@@ -1,5 +1,8 @@
 buildConsoleWrapLines_COPY=true
 eclipse.preferences.version=1
+editor_folding_enabled=true
+editor_folding_preprocessor_enabled=true
+editor_folding_statements=true
 formatter_profile=org.eclipse.cdt.ui.default.allman_profile
 formatter_settings_version=1
 inactiveCodeColor=87,87,87

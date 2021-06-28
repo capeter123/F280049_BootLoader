@@ -7,5 +7,5 @@ MODULES_MRU_PATH.4=D\:\\DSP\\_DspProject\\OBC_LLC_J7E_210511\\Debug\\OBC_LLC_J7E
 MODULES_MRU_PATH.5=D\:\\DSP\\_DspProject\\gpio_ex1_setup\\CPU1_RAM\\gpio_ex1_setup.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx_CPU1
 MODULES_MRU_PATH.6=D\:\\DSP\\_DspProject\\GPIO_Ex1\\Debug\\GPIO_Ex1.out\#THREAD_IDS\#Texas Instruments XDS110 USB Debug Probe_0/C28xx
 eclipse.preferences.version=1
-symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Data<seperator>Texas\ Instruments\ XDS110\ USB\ Debug\ Probe_0\\C28xx_CPU1=0x80000,80000
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>Data<seperator>Texas\ Instruments\ XDS110\ USB\ Debug\ Probe_0\\C28xx_CPU1=0x084000,0x81138,0x80000,80000
 useAnnotationsPrefPage=true

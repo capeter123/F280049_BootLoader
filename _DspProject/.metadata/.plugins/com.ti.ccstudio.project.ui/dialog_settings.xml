@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="com.ti.ccstudio.project.ui.internal.preferences.DynamicPreferencePageManager">
+		<item key="CCS.VIEW_ADVANCED" value="true"/>
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
 		<item key="CCS.VIEW_ADVANCED" value="true"/>

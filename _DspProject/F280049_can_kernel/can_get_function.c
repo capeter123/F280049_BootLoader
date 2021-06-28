@@ -34,6 +34,7 @@ void canFlush(void);
 void sendACK(void);
 void sendNAK(void);
 uint16_t canGetPacket(uint16_t* length, uint16_t* data);
+uint16_t canSendPacket(uint16_t command, uint16_t status, uint16_t length, uint16_t* data);
 uint32_t canGetFunction(uint32_t BootMode);
 
 inline uint16_t canGetACK(void);
@@ -232,7 +233,7 @@ uint32_t canGetFunction(uint32_t BootMode)
         //
         // Send the packet and if NAK send again
         //
-        //while (canSendPacket(command, statusCode.status, 6, (uint16_t*)&statusCode.address))
+        while (canSendPacket(command, statusCode.status, 6, (uint16_t*)&statusCode.address))
         {
 
         }
@@ -538,12 +539,12 @@ uint16_t canGetPacket(uint16_t* length, uint16_t* data)
 //                  statusCode global variable contents.  It then waits
 //                  for an ACK or NAK from the host.
 //
-uint16_t sciSendPacket(uint16_t command, uint16_t status, uint16_t length,
+uint16_t canSendPacket(uint16_t command, uint16_t status, uint16_t length,
                       uint16_t* data)
 {
     int i;
 
-    canFlush();
+    //canFlush();
 
     //
     // driverlib's version of delay
@@ -639,21 +640,14 @@ void canSendWord(uint16_t word)
 {
     uint16_t byteData[2] = {0, 0};
 
-    // send LSB of word
+    // send MSB|LSB of word
     byteData[0] = word & 0xFF;
-    byteData[1] = word & 0xFF;
-    CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, byteData);
-
-    checksum += word & 0xFF;
-
-    canFlush();
-    canGetACK();
-
-    // send MSB of word
-    byteData[0] = (word>>8) & 0xFF;
     byteData[1] = (word>>8) & 0xFF;
 
+    checksum += word & 0xFF;
     checksum += (word>>8) & 0xFF;
+
+    CAN_sendMessage(CANA_BASE,TX_MSG_OBJ_ID, MSG_DATA_LENGTH, byteData);
 
     canFlush();
     canGetACK();
@@ -699,7 +693,6 @@ void canKeyCheck(uint16_t word)
     rxMsgData[0] = wordData[0];
     rxMsgData[1] = wordData[1];
 }
-
 
 
 
