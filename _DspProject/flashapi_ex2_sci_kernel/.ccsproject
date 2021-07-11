@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="10.0.0"/>
+	<deviceVariant value="TMS320C28XX.TMS320F280049C"/>
+	<deviceFamily value="C2000"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="20.2.0.LTS"/>
+	<isElfFormat value="false"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=flashapi_ex2_sciKernel.projectspec.flashapi_ex2_sci_kernel"/>
+	<origin value="C:\ti\c2000\C2000Ware_3_04_00_00\driverlib\f28004x\examples\flash\CCS\flashapi_ex2_sciKernel.projectspec"/>
+	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
+</projectOptions>

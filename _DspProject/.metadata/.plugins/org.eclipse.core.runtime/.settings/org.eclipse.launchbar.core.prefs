@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049.ccxml,org.eclipse.launchbar.core.descriptorType.default\:XDS100S_TMS320F28335.ccxml,org.eclipse.launchbar.core.descriptorType.default\:F280049_Project_v0,org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049C.ccxml,org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049_XDS110.ccxml
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049.ccxml,org.eclipse.launchbar.core.descriptorType.default\:XDS100S_TMS320F28335.ccxml,org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049C.ccxml,org.eclipse.launchbar.core.descriptorType.default\:TMS320F28335_XDS100.ccxml,org.eclipse.launchbar.core.descriptorType.default\:F280049_Project_v0,org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049_XDS110.ccxml
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049.ccxml/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:TMS320F280049.ccxml/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

@@ -1,0 +1,76 @@
+
+**** Build of configuration BANK1_NO_LDFU for project flashapi_ex2_sci_kernel ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 6 all -O 
+ 
+Building file: "../flashapi_ex2_erase.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="flashapi_ex2_erase.d_raw"  "../flashapi_ex2_erase.c"
+Finished building: "../flashapi_ex2_erase.c"
+ 
+Building file: "../flashapi_ex2_sci_boot.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="flashapi_ex2_sci_boot.d_raw"  "../flashapi_ex2_sci_boot.c"
+Finished building: "../flashapi_ex2_sci_boot.c"
+ 
+Building file: "../flashapi_ex2_verify.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="flashapi_ex2_verify.d_raw"  "../flashapi_ex2_verify.c"
+Finished building: "../flashapi_ex2_verify.c"
+ 
+Building file: "../flashapi_ex2_boot.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="flashapi_ex2_boot.d_raw"  "../flashapi_ex2_boot.c"
+Finished building: "../flashapi_ex2_boot.c"
+ 
+Building file: "../flashapi_ex2_sci_kernel.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="flashapi_ex2_sci_kernel.d_raw"  "../flashapi_ex2_sci_kernel.c"
+Finished building: "../flashapi_ex2_sci_kernel.c"
+ 
+Building file: "../device/f28004x_codestartbranch.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="device/f28004x_codestartbranch.d_raw" --obj_directory="device"  "../device/f28004x_codestartbranch.asm"
+Finished building: "../device/f28004x_codestartbranch.asm"
+ 
+Building file: "../flashapi_ex2_sci_get_function.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="flashapi_ex2_sci_get_function.d_raw"  "../flashapi_ex2_sci_get_function.c"
+Finished building: "../flashapi_ex2_sci_get_function.c"
+ 
+Building file: "../device/device.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel" --include_path="D:/DSP/_DspProject/flashapi_ex2_sci_kernel/device" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib" --include_path="C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/include/FlashAPI" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="device/device.d_raw" --obj_directory="device"  "../device/device.c"
+Finished building: "../device/device.c"
+ 
+Building target: "flashapi_ex2_sci_kernel.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --define=CPU1 --define=_FLASH --define=BANK1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"flashapi_ex2_sci_kernel.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ti/c2000/C2000Ware_3_04_00_00/libraries/flash_api/f28004x/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="flashapi_ex2_sci_kernel_linkInfo.xml" --entry_point=code_start --rom_model -o "flashapi_ex2_sci_kernel.out" "./flashapi_ex2_boot.obj" "./flashapi_ex2_erase.obj" "./flashapi_ex2_sci_boot.obj" "./flashapi_ex2_sci_get_function.obj" "./flashapi_ex2_sci_kernel.obj" "./flashapi_ex2_verify.obj" "./device/device.obj" "./device/f28004x_codestartbranch.obj" "../28004x_flash_bank1_NoLDFU_lnk.cmd" "../F021_API_F28004x_FPU32.lib" "C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/ccs/Debug/driverlib.lib"  -llibc.a 
+<Linking>
+Finished building target: "flashapi_ex2_sci_kernel.out"
+ 
+Building files: "flashapi_ex2_sci_kernel.out"
+Invoking: C2000 Hex Utility
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/hex2000" --boot --sci8 --ascii -o "flashapi_ex2_sci_kernel.txt"  "flashapi_ex2_sci_kernel.out" 
+Translating to ASCII-Hex format...
+   "flashapi_ex2_sci_kernel.out" codestart ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .cinit ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .econst ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .TI.ramfunc ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .text.1 ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .text.2 ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .text.3 ==> (BOOT TABLE)
+Finished building: "flashapi_ex2_sci_kernel.out"
+ 
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/hex2000" "flashapi_ex2_sci_kernel.out" -boot -sci8 -a -o "flashapi_ex2_sci_kernel.txt"
+Translating to ASCII-Hex format...
+   "flashapi_ex2_sci_kernel.out" codestart ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .cinit ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .econst ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .TI.ramfunc ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .text.1 ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .text.2 ==> (BOOT TABLE)
+   "flashapi_ex2_sci_kernel.out" .text.3 ==> (BOOT TABLE)
+ 
+
+**** Build Finished ****

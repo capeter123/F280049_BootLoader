@@ -72,8 +72,6 @@ void main(void)
         GPIO_togglePin(GPIO_LED1);
         GPIO_togglePin(GPIO_LED2);
         DEVICE_DELAY_US(250000);
-
-        AdcaRegs.
     }
 
 }
