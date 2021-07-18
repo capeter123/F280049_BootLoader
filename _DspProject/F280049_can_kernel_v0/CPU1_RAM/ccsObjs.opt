@@ -1,1 +1,0 @@
-"./boot.obj" "./can_boot.obj" "./can_get_function.obj" "./codestartbranch.obj" "./dfu_kernel.obj" "./erase.obj" "./verify.obj" "./device/device.obj" "../28004x_generic_ram_lnk.cmd" "../F021_API_F28004x_FPU32.lib" "C:/ti/c2000/C2000Ware_3_04_00_00/driverlib/f28004x/driverlib/ccs/Debug/driverlib.lib" -llibc.a 
